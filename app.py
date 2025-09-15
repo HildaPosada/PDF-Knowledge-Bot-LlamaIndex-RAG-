@@ -1,4 +1,8 @@
 import os
+# Make sure HF token from secrets is visible as environment variable
+if "HUGGINGFACEHUB_API_TOKEN" in st.secrets:
+    os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
+
 import tempfile
 import streamlit as st
 
