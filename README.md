@@ -1,4 +1,4 @@
-# PDF Knowledge Bot — RAG Pipeline
+# [PDF Knowledge Bot — RAG Pipeline](https://pdf-demo-eight.vercel.app/)
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![LlamaIndex](https://img.shields.io/badge/LlamaIndex-8B5CF6?style=for-the-badge&logoColor=white)](https://www.llamaindex.ai/)
@@ -6,8 +6,6 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![pypdf](https://img.shields.io/badge/pypdf-D62828?style=for-the-badge&logoColor=white)](https://pypdf.readthedocs.io/)
 [![Vercel](https://img.shields.io/badge/Vercel-171717?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
-
-> **[Live app](https://pdf-demo-eight.vercel.app/)**
 
 ![Demo Screenshot](docs/assets/demo-screenshot.png)
 
