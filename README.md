@@ -8,14 +8,15 @@
 [![Vercel](https://img.shields.io/badge/Vercel-171717?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 
+> **[Live app](https://pdf-demo-eight.vercel.app/)**
+
 ## Verified deployment status · October 1, 2026
 
-The [web app](https://pdf-demo-eight.vercel.app/) now extracts text from the uploaded PDF and returns matching passages with page numbers. A controlled PDF upload and an unrelated-query check passed. This deployed app is extractive keyword search using pypdf; it does not generate LLM answers. The separate LlamaIndex/Streamlit implementation has not been verified end-to-end in this audit.
+The web app now extracts text from the uploaded PDF and returns matching passages with page numbers. A controlled PDF upload and an unrelated-query check passed. This deployed app is extractive keyword search using pypdf; it does not generate LLM answers. The separate LlamaIndex/Streamlit implementation has not been verified end-to-end in this audit.
 
 See [deployment source and scope](web/README.md) and the [portfolio audit](https://github.com/HildaPosada/hildaposada.github.io/blob/master/docs/project_audit.md). Historical descriptions below are not evidence of a connected production backend.
 
 
-> **[Live Demo](https://pdf-demo-eight.vercel.app)** | Ask questions about any PDF and get grounded answers with source citations.
 
 ![Demo Screenshot](demo-screenshot.png)
 
