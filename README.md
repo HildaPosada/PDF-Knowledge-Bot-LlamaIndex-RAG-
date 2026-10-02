@@ -1,5 +1,13 @@
 # PDF Knowledge Bot — RAG Pipeline
 
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![LlamaIndex](https://img.shields.io/badge/LlamaIndex-8B5CF6?style=for-the-badge&logoColor=white)](https://www.llamaindex.ai/)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=111111)](https://huggingface.co/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![pypdf](https://img.shields.io/badge/pypdf-D62828?style=for-the-badge&logoColor=white)](https://pypdf.readthedocs.io/)
+[![Vercel](https://img.shields.io/badge/Vercel-171717?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
+
 ## Verified deployment status · October 1, 2026
 
 The [web app](https://pdf-demo-eight.vercel.app/) now extracts text from the uploaded PDF and returns matching passages with page numbers. A controlled PDF upload and an unrelated-query check passed. This deployed app is extractive keyword search using pypdf; it does not generate LLM answers. The separate LlamaIndex/Streamlit implementation has not been verified end-to-end in this audit.
