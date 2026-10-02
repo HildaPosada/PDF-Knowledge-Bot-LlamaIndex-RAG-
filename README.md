@@ -1,4 +1,4 @@
-# [PDF Knowledge Bot — RAG Pipeline](https://pdf-demo-eight.vercel.app/)
+# [PDF Knowledge Bot](https://pdf-demo-eight.vercel.app/)
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![LlamaIndex](https://img.shields.io/badge/LlamaIndex-8B5CF6?style=for-the-badge&logoColor=white)](https://www.llamaindex.ai/)
@@ -7,44 +7,24 @@
 [![pypdf](https://img.shields.io/badge/pypdf-D62828?style=for-the-badge&logoColor=white)](https://pypdf.readthedocs.io/)
 [![Vercel](https://img.shields.io/badge/Vercel-171717?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-![Demo Screenshot](docs/assets/demo-screenshot.png)
+Upload a text-based PDF, ask a question, and inspect relevant passages with clickable page citations.
 
----
+## How it works
 
-## The Problem
+The deployed web app extracts page text with pypdf, creates overlapping chunks, and ranks them using BM25. It returns an explicit no-match result when no query terms are found. Optional generated answers use the retrieved excerpts and require a configured model provider.
 
-LLMs hallucinate. Standard chatbots answer from training data, not from your documents. This project solves that with a RAG pipeline: retrieve first, then generate — so every answer is grounded in the actual document.
+Files are processed per request. The application does not persist uploaded documents.
 
-## What I Built
+## Implementations
 
-- Indexed PDFs using LlamaIndex with HuggingFace sentence-transformers (free, local embeddings)
-- Semantic search retrieves top-k relevant chunks before generation
-- Mistral-7B (HuggingFace free-tier) generates answers with source citations
-- Streamlit frontend with document switcher and chat history
-- Supports multiple PDFs: switch context without reindexing
+- `web/`: deployed passage search and optional answer generation.
+- `app.py`: separate Streamlit/LlamaIndex implementation with local embeddings.
 
-## Key Result
+[Provider configuration](docs/generation.md) explains how to enable generation. The provider-backed flow still needs live verification after credentials are configured.
 
-**Zero hallucination on in-document Q&A: every answer includes source page and chunk reference.**
-
-## Skills Demonstrated
-
-`Python` `LlamaIndex` `RAG` `HuggingFace` `Streamlit` `NLP` `Vector Search`
-
-## How to Run
+## Run the Streamlit implementation
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
-Set your HuggingFace API key in `.env`:
-```
-HUGGINGFACE_API_KEY=your_key_here
-```
-
-## About
-
-Built by Hilda Posada | MS Organic Chemistry, CSULB | Omdena ML Lead
-[LinkedIn](https://linkedin.com/in/hildaposada) | [GitHub](https://github.com/HildaPosada) | [Portfolio](https://hildaposada.github.io)
-
