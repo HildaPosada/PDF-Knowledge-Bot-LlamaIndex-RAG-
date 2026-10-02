@@ -4,7 +4,7 @@
 
 The [web app](https://pdf-demo-eight.vercel.app/) now extracts text from the uploaded PDF and returns matching passages with page numbers. A controlled PDF upload and an unrelated-query check passed. This deployed app is extractive keyword search using pypdf; it does not generate LLM answers. The separate LlamaIndex/Streamlit implementation has not been verified end-to-end in this audit.
 
-See [deployment source and scope](web/README.md) and the [portfolio audit](https://github.com/HildaPosada/hildaposada.github.io/blob/main/docs/project_audit.md). Historical descriptions below are not evidence of a connected production backend.
+See [deployment source and scope](web/README.md) and the [portfolio audit](https://github.com/HildaPosada/hildaposada.github.io/blob/master/docs/project_audit.md). Historical descriptions below are not evidence of a connected production backend.
 
 
 > **[Live Demo](https://pdf-demo-eight.vercel.app)** | Ask questions about any PDF and get grounded answers with source citations.
