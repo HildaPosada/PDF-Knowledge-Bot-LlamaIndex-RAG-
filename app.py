@@ -1,10 +1,10 @@
 import os
+import streamlit as st
 # Make sure HF token from secrets is visible as environment variable
 if "HUGGINGFACEHUB_API_TOKEN" in st.secrets:
     os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
 
 import tempfile
-import streamlit as st
 
 from llama_index.core import VectorStoreIndex, Settings, StorageContext, load_index_from_storage
 from llama_index.core import SimpleDirectoryReader
@@ -56,7 +56,8 @@ st.markdown(
 
 # Simple toggle in UI for convenience
 use_api_ui = st.toggle("Use Hugging Face free API", value=bool(USE_HF_API))
-USE_HF_API = use_api_ui  # reflect toggle in runtime, but we keep the same llm object for session simplicity
+if use_api_ui != bool(USE_HF_API):
+    st.info("Change USE_HF_API in configuration and restart the app to select another backend.")
 
 uploaded_files = st.file_uploader("Upload one or more PDFs", type=["pdf"], accept_multiple_files=True)
 
